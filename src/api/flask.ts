@@ -10,7 +10,7 @@ export const flask_POST = async (data : string)=>{
 
     if (response.ok) {
       const data = await response.json();
-      console.log("Returned ok");
+      console.log("Returned ",data);
       return data;
     }
     else {
