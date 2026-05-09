@@ -1,6 +1,6 @@
 export const flask_POST = async (data : string)=>{
   try {
-    const response = await fetch('http://localhost:5000/data', {
+    const response = await fetch('https://flaskbackendestwebpage-production.up.railway.app/data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -9,18 +9,17 @@ export const flask_POST = async (data : string)=>{
     });
 
     if (response.ok) {
-      const data = await response.json();
-      console.log("Returned ",data);
-      return data;
+      const responseData = await response.json();
+      console.log("Returned ", responseData);
+      return responseData;
     }
     else {
       const error = await response.text();
-      // FLASK RETURNS AN ERROR FROM THE FUNCTION BUT STILL RETURNS DATA
-      console.error("Returned ",error);
-      throw new Error('Failed');
+      console.error("Returned error:", error);
+      throw new Error(`Request failed: ${response.status}`);
     }
   } catch(error) {
-    console.error("Error",error);
+    console.error("Network error:", error);
     throw error;
   }
 };
