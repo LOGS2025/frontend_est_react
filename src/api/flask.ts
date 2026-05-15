@@ -1,7 +1,7 @@
 export const flask_POST = async (data : string)=>{
   try {
-    // const response = await fetch('https://flaskbackendestwebpage-production.up.railway.app/data', {
-    const response = await fetch('http://localhost:5000/data', {
+    const response = await fetch('https://flaskbackendestwebpage-production.up.railway.app/data', {
+    // const response = await fetch('http://localhost:5000/data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

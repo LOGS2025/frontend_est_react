@@ -30,7 +30,7 @@ export const ProbForm = ({
 
   const select_tail = ()=>{
     return (
-        <select className="max-w-8"
+        <select className="max-w-8 ml-2 mr-4"
             onChange={(e)=>{handleChange('tail',inputs_tail.current?.value);}}
             required ref={inputs_tail}
             name="select_prob" 
