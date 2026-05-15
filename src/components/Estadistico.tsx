@@ -150,25 +150,31 @@ export const Estadistico = ({
     case '1':
     case '3':
       return(
-      <div className="flex flex-col flex-nowrap">
-          {poblacion_js("Poblacion correspondiente a muestra 1",inputs.poblacion1)}
-          {poblacion_js("Poblacion correspondiente a muestra 2",inputs.poblacion2)}
-          
-          {muestra_js("Muestra 1",inputs.muestra1)}
-          {muestra_js("Muestra 2",inputs.muestra2)}
-          
-          {buildJSON()}
+      <div>
+        <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap md:items-start items-center md:justify-center">
+            {poblacion_js("Poblacion correspondiente a muestra 1",inputs.poblacion1)}
+            {poblacion_js("Poblacion correspondiente a muestra 2",inputs.poblacion2)}
+            
+            {muestra_js("Muestra 1",inputs.muestra1)}
+            {muestra_js("Muestra 2",inputs.muestra2)}
+        </div>
+        <div className="flex flex-col items-center">
+            {buildJSON()}
+        </div>
       </div>
       )
     case '2':
     case '4':
       return(
-      <div className="flex flex-col flex-nowrap">
-          {poblacion_js("Poblacion",inputs.poblacion1)}
+      <div className="container">
+        <div className="flex flex-col md:flex-row flex-nowrap md:flex-wrap md:items-start md:justify-center items-center">
+            {poblacion_js("Poblacion",inputs.poblacion1)}
 
-          {muestra_js("Muestra",inputs.muestra1)}
-
+            {muestra_js("Muestra",inputs.muestra1)}
+        </div>
+        <div className="flex flex-col items-center">
           {buildJSON()}
+        </div>
       </div>
       )
   }

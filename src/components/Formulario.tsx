@@ -82,18 +82,7 @@ export const Formulario = () => {
           <div className="flex items-center flex-col">
             <label className="text-blue-500">Tipo de prueba</label>
             <select 
-              className="text-center 
-              bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 
-              text-white font-medium
-              border-2 border-blue-300 
-              rounded-2xl 
-              w-2/3 
-              min-w-50
-              p-3 m-2
-              shadow-lg hover:shadow-xl
-              transition-all duration-300
-              cursor-pointer
-              wrap-break-word"
+              className="text-center bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-mediumborder-2 border-blue-300 rounded-2xl w-2/3 min-w-50p-3 m-2shadow-lg hover:shadow-xltransition-all duration-300cursor-pointerwrap-break-word"
               onChange={(e)=>{setTest(test_type.current ? test_type.current.value : '' )}} 
               required ref={test_type}>
               <option value="0"></option>

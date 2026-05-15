@@ -14,8 +14,6 @@ export const SuccessBox = ({probData}:{probData : ProbabilityResult})=>{
                 <span className={styles.res}>{(probData.result * 100).toFixed(4)}%</span>
                 <span className="text-blue-400">Distribución:</span>
                 <span className={styles.res}>{probData.distribution}</span>
-                <span className="text-blue-400">Condición:</span>
-                <span className={styles.res}>{probData.condition}</span>
             </div>
         </div>
     )
